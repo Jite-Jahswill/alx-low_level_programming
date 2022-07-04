@@ -1,19 +1,20 @@
 #include <stdio.h>
 
 /**
- * main - entry point
- *
- * Description: Print numbers 0 to 9 on one line
- * Return: 0
- */
+  * main - Prints the numbers since 0 to 9
+  *
+  * Return: Always (Success)
+  */
 int main(void)
 {
-char i;
+	char n;
 
-for (i = '0'; i <= '0'; ++i)
-putchar(i);
+	for (n = '0'; n <= '9'; n++)
+	{
+		putchar(n);
+	}
 
-putchar('\n');
+	putchar('\n');
 
-return (0);
+	return (0);
 }
