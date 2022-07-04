@@ -1,30 +1,26 @@
 #include <stdio.h>
+
 /**
- * main - main block
- * Description: prints all single digit numbers of base 10
- * starting from 0, followed by a new line.
- * Return: 0
- */
+  * main - Prints a serie of numbers with commas
+  *
+  * Return: Always (Success);
+  */
 int main(void)
 {
-int c = 0;
+	int c;
 
-while (c < 10)
-{
-putchar(48 +c);
-if (c != 9)
-{
-putchar(',');
-putchar(' ');
+	for (c = '0'; c <= '9'; c++)
+	{
+		putchar(c);
+
+		if (c != '9')
+		{
+			putchar(',');
+			putchar(' ');
+		}
+	}
+
+	putchar('\n');
+
+	return (0);
 }
-c++;
-}
-putchar('\n');
-return (0);
-}
-
-
-
-
-
-
