@@ -1,28 +1,26 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
-  * _strcat - Concatenates two strings
-  * @dest: The destination string
-  * @src: The source string
-  *
-  * Return: A pointer to the resulting string dest
-  */
-char *_strcat(char *dest, char *src)
+ * _strcat - Fills memory with a constant byte
+ * @s: buffer array
+ * @b: constant byte
+ * @n: number of bytes of memory area to fill
+ * Description: Fill the first `n` bytes of the memory area pointed to by `s`
+ * with the constant byte `b`.
+ * Return: Pointer to memory area `s`
+ */
+
+char *_strcat(char *s, char b, unsigned int n)
 {
-	int dlen = 0, i;
+	int i;
 
-	while (dest[dlen])
+	i = 0;
+	while (n > 0)
 	{
-		dlen++;
+		s[i] = b;
+		i++;
+		n--;
 	}
 
-	for (i = 0; src[i] != 0; i++)
-	{
-		dest[dlen] = src[i];
-		dlen++;
-	}
-
-	dest[dlen] = '\0';
-	return (dest);
+	return (s);
 }
