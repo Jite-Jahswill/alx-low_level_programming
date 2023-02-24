@@ -1,28 +1,31 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
-* main - Fizz Buzz
-*
-* Return: 0
+* print_diagonal - prints diagonal line on the terminal
+*@n: numbers of lines and columns
+* Return: none
 **/
 
-int main(void)
+void print_diagonal(int n)
 {
-	int i;
+	int l, c;
 
-	for (i = 1; i <= 100; i++)
+	for (l = 0; l < n; l++)
 	{
-		if ((i % 3) == 0 && (i % 5) != 0)
-			printf("Fizz ");
-		else if (i == 100)
-			printf("Buzz");
-		else if ((i % 5) == 0 && (i % 3) != 0)
-			printf("Buzz ");
-		else if ((i % 3) == 0 && (i % 3) == 0)
-			printf("FizzBuzz ");
-		else
-			printf("%d ", i);
+		for (c = 0; c <= l; c++)
+		{
+			if (c != l)
+			{
+				_putchar(' ');
+			}
+			else
+			{
+				_putchar('\\');
+			}
+
+		}
+		_putchar('\n');
 	}
-	printf("\n");
-	return (0);
+	if (n <= 0)
+		_putchar('\n');
 }
