@@ -1,26 +1,18 @@
-#include ""[Dmain.h"
-
+i#include "main.h"
 /**
- *_strlen -length of a string
- *
- *
- *[A[A@s: A pointer to an init that will be changed/updated
-
-[C*Return: void that means our answer is correct
+ * _strlen - returns the length of a string
+ * @s: string
+ * Return: length
  */
-
-int  _strlen(char *s)[B[B[B
+int _strlen(char *s)
 {
-int u:
-u = 0;[A
+	int longi = 0;
 
-[A[A[C[C[C[C[C[B[B[A[B[B[C[C[C[C[C[C[C[C[C[C[D[D[D[D[D[D[D[D[D[D[D[A[C[C[C[C[C[C[C[C[B[A
+	while (*s != '\0')
+	{
+		longi++;
+		s++;
+	}
 
-u = 0;
-while ()[Ds[][B[A[B[Du]  !='\0')
-{
-u++;
+	return (longi);
 }
-return
-[A[C[C[C[C[C[C[C[D[ (u);
-}[A[A[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[[C[C[[C[C[C[C![C[C !='\0')[B[B[B[B[B[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D
